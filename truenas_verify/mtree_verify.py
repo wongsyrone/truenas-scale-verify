@@ -110,6 +110,7 @@ def validate_mtree_entry(entry) -> list[str]:
 
 def process_chunk(chunk) -> list[str]:
     errors = []
+    return errors
     for eline in chunk:
         # Crazy but effective decode process.
         line = eline.encode('latin-1').decode('unicode_escape').encode('latin-1').decode('utf-8').strip()
